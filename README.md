@@ -3,8 +3,17 @@
 ![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
 ![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
 ![Supabase](https://img.shields.io/badge/Database-Supabase-3ECF8E?logo=supabase&logoColor=white)
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel&logoColor=white)
+![Render](https://img.shields.io/badge/Backend-Render-46E3B7?logo=render&logoColor=white)
 
 Built for **Code, by Groww (2026)**.
+
+## Live Demo
+
+- 🌐 **Live Web Application:** [https://frontend-nu-murex-95.vercel.app](https://frontend-nu-murex-95.vercel.app)
+- ⚙️ **Backend API (Render):** [https://pulse-backend-wnr3.onrender.com](https://pulse-backend-wnr3.onrender.com)
+
+> **Note on Render Free Tier:** The backend spins down after ~15 minutes of inactivity. The initial request on a cold start may take 30–50 seconds to wake up the server.
 
 ## What this is
 
