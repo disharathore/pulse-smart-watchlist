@@ -13,10 +13,19 @@ Most watchlists show you prices. Pulse instead answers "what actually deserves m
 ## Screenshots
 
 ![Catch-up view with portfolio performance chart](screenshots/catchup-view.png)
+*Triage view — stocks sorted into Needs a Decision / Worth a Look / Nothing to Do*
 
-![Stock detail with price history and news](screenshots/stock-detail.png)
+![Full watchlist table with sort and filter](screenshots/full-list-view.png)
+*Full sortable, filterable table view with attention scores and confidence levels*
+
+![Real news headlines paired with price context](screenshots/news-context.png)
+*Every flagged move is paired with real news context, not just a number*
 
 ![Sensitivity settings panel](screenshots/settings-panel.png)
+*User-adjustable triage thresholds, applied live across the whole app*
+
+![How the scoring engine works](screenshots/how-it-works.png)
+*In-app methodology explainer — full transparency on how "meaningful change" is calculated*
 
 ## Key Features
 
