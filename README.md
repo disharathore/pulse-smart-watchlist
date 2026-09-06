@@ -8,12 +8,39 @@
 
 Built for **Code, by Groww (2026)**.
 
-## Live Demo
+## Live Demo & Instant Testing
 
 - 🌐 **Live Web Application:** [https://frontend-nu-murex-95.vercel.app](https://frontend-nu-murex-95.vercel.app)
 - ⚙️ **Backend API (Render):** [https://pulse-backend-wnr3.onrender.com](https://pulse-backend-wnr3.onrender.com)
 
-> **Note on Render Free Tier:** The backend spins down after ~15 minutes of inactivity. The initial request on a cold start may take 30–50 seconds to wake up the server.
+> **⚡ Note for Reviewers (Render Free Tier):** The backend spins down after ~15 minutes of inactivity. On your very first visit, please allow **30–50 seconds** for the free Render instance to wake up. Once active, all interactions and real-time updates are instantaneous.
+
+---
+
+## 🎯 Reviewer Testing Guide (Feature Walkthrough)
+
+To quickly evaluate the core differentiators of Pulse, we recommend trying these 6 workflows:
+
+1. **Catch-up Triage View (Default Screen):**
+   - Notice how stocks are prioritized into **Needs Decision** (red/high score), **Worth a Look** (yellow), and **Quiet** (gray), rather than an unsorted flat list.
+   - Inspect the **Attention Score Gauge** (0–100) and bullet-point reasons explaining *why* a move was flagged (e.g. *“1.8% sudden drop vs 10-poll baseline”*).
+2. **Portfolio Performance & Compare Mode:**
+   - At the top of the dashboard, see the **Portfolio Performance** chart showing today's normalized percentage movement.
+   - Click **`⇄ Compare`** to overlay individual stocks on a normalized percentage scale with a multi-color legend and symbol selector pills.
+3. **Deep-Dive Stock Detail & News:**
+   - Click on any stock ticker (e.g., `MSFT`, `AAPL`, `NVDA`) to open the detail modal.
+   - View the interactive price trend chart, historical anomaly event log, and **real-time company headlines** fetched directly from market feeds.
+4. **Bulk & Quick Stock Addition:**
+   - Click **`+ Add Symbol`** (or press shortcut `N`).
+   - Try typing multiple comma-separated symbols (e.g. `GOOGL, AMZN, TSLA`) or click the quick-add suggestion chips.
+5. **Adjustable Sensitivity Thresholds:**
+   - Click **`⚙ Settings`** (top-right).
+   - Adjust the **Needs Decision** and **Worth a Look** threshold sliders to see how your sensitivity rules update the triage evaluation in real time.
+6. **Keyboard Shortcuts:**
+   - Press **`?`** anywhere to open the keyboard shortcut cheatsheet.
+   - Press **`N`** to open the Add Stock modal, and **`Esc`** to dismiss any open modal.
+
+---
 
 ## What this is
 
