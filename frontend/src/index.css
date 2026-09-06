@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bg text-text font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+    letter-spacing: -0.011em;
+
+    /* Subtle radial vignette: slightly lighter in the top-center,
+       fading to the pure dark base. One colour, two stops. */
+    background-image: radial-gradient(
+      ellipse 80% 50% at 50% -10%,
+      rgba(79, 70, 229, 0.055) 0%,
+      transparent 70%
+    );
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    @apply bg-accent/30 text-text;
+  }
+}
+
+/* ─── Subtle scrollbars ─────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a2a2e; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a3e; }
+
+/* ─── Ticker tape ───────────────────────────────────── */
+@keyframes ticker-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.ticker-track {
+  animation: ticker-scroll 40s linear infinite;
+  display: flex;
+  width: max-content;
+}
+.ticker-track:hover { animation-play-state: paused; }
+
+/* ─── Fade + slide in (cards, chart) ─────────────────── */
+@keyframes fade-up {
+  0%   { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-up {
+  animation: fade-up 0.28s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+/* Staggered version for grid children */
+.card-grid > *:nth-child(1)  { animation-delay: 0ms;  }
+.card-grid > *:nth-child(2)  { animation-delay: 40ms; }
+.card-grid > *:nth-child(3)  { animation-delay: 80ms; }
+.card-grid > *:nth-child(4)  { animation-delay: 120ms;}
+.card-grid > *:nth-child(5)  { animation-delay: 160ms;}
+.card-grid > *:nth-child(6)  { animation-delay: 200ms;}
+
+/* ─── Generic fade-in (modals, toasts) ───────────────── */
+@keyframes fade-in {
+  0%   { opacity: 0; transform: translateY(4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
+
+/* ─── Refresh spin ───────────────────────────────────── */
+@keyframes spin-refresh {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.spin-anim {
+  animation: spin-refresh 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Skeleton pulse ─────────────────────────────────── */
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 0.06; }
+  50%       { opacity: 0.12; }
+}
+.skeleton-pulse { animation: skeleton-pulse 1.8s ease-in-out infinite; }
+
+/* ─── Number flash on live update ───────────────────── */
+@keyframes num-flash {
+  0%   { background-color: rgba(79, 70, 229, 0.25); }
+  100% { background-color: transparent; }
+}
+.num-flash {
+  animation: num-flash 0.6s ease-out;
+  border-radius: 3px;
+}
+@keyframes num-flash-up {
+  0%   { background-color: rgba(34, 197, 94, 0.25); }
+  100% { background-color: transparent; }
+}
+.num-flash-up   { animation: num-flash-up   0.7s ease-out; border-radius: 3px; }
+@keyframes num-flash-down {
+  0%   { background-color: rgba(239, 68, 68, 0.20); }
+  100% { background-color: transparent; }
+}
+.num-flash-down { animation: num-flash-down 0.7s ease-out; border-radius: 3px; }
+
+/* ─── Chart elevation (glass-like inner glow) ────────── */
+.chart-elevation {
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.04) inset,
+    0 4px 24px rgba(0,0,0,0.35);
+}
+
+/* ─── Global component classes ───────────────────────── */
+@layer components {
+  /* Primary: solid indigo */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-small font-medium
+           bg-accent text-white rounded-[6px]
+           hover:bg-accent-hover active:scale-[0.98]
+           transition-all duration-150 select-none
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent
+           focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
+  }
+
+  /* Secondary: transparent with border */
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-1.5 px-3 py-1.5 text-small font-medium
+           bg-transparent text-muted rounded-[6px] border border-border
+           hover:text-text hover:border-border-hover active:scale-[0.98]
+           transition-all duration-150 select-none
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent
+           focus-visible:ring-offset-2 focus-visible:ring-offset-bg;
+  }
+
+  /* Text input */
+  .input-field {
+    @apply bg-surface border border-border rounded-[6px] px-3 py-1.5 text-body text-text
+           placeholder:text-muted/60
+           focus:outline-none focus:ring-2 focus:ring-accent focus:border-transparent
+           transition-all duration-150;
+  }
+}
