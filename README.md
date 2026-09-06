@@ -1,10 +1,22 @@
 # Pulse — Smart Market Watchlist
 
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
+![Supabase](https://img.shields.io/badge/Database-Supabase-3ECF8E?logo=supabase&logoColor=white)
+
 Built for **Code, by Groww (2026)**.
 
 ## What this is
 
 Most watchlists show you prices. Pulse instead answers "what actually deserves my attention right now, and why" — the default screen is a **catch-up triage** (needs a decision / worth a look / nothing to do), not a flat table of tickers.
+
+## Screenshots
+
+![Catch-up view with portfolio performance chart](screenshots/catchup-view.png)
+
+![Stock detail with price history and news](screenshots/stock-detail.png)
+
+![Sensitivity settings panel](screenshots/settings-panel.png)
 
 ## Key Features
 

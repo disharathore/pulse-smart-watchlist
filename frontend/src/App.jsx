@@ -37,7 +37,8 @@ function AppInner() {
   const [tab, setTab] = useState('catchup');
   const [catchup, setCatchup] = useState(null);
   const [fullList, setFullList] = useState([]);
-  const [detailSymbol, setDetailSymbol] = useState(null);
+  const searchParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
+  const [detailSymbol, setDetailSymbol] = useState(searchParams ? searchParams.get('detail') : null);
   const [pendingRemove, setPendingRemove] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -45,7 +46,7 @@ function AppInner() {
 
   // Modals & Panels
   const [showHelp, setShowHelp] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
+  const [showSettings, setShowSettings] = useState(searchParams ? searchParams.get('settings') === 'true' : false);
   const [settings, setSettings] = useState({ needsDecision: 55, worthALook: 25 });
 
   // Signal Accuracy
