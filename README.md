@@ -116,29 +116,29 @@ backend/
 │   └── worker.js          # Background price poller & correlated-move detector
 ├── routes/
 │   ├── watchlist.js       # Watchlist CRUD, stats, and catchup endpoints
-│   ├── stocks.js           # History, detail, news, and profile endpoints
-│   └── settings.js         # User alert sensitivity configuration
+│   ├── stocks.js          # History, detail, news, and profile endpoints
+│   └── settings.js        # User alert sensitivity configuration
 └── schema.sql             # Database schema and table definitions
 
 frontend/
-└── src/
-    ├── App.jsx             # Main dashboard layout and navigation
-    ├── api.js              # Centralized API client
-    ├── index.css           # Tailwind design tokens and animations
-    └── components/
-        ├── CatchupView.jsx     # Triage decision grid
-        ├── WatchlistTable.jsx  # Full sortable/searchable watchlist table
-        ├── StockCard.jsx       # Individual stock card with gauge and news
-        ├── StockDetail.jsx     # Interactive stock history and news modal
-        ├── PortfolioChart.jsx  # Portfolio performance and compare mode chart
-        ├── ScoreGauge.jsx      # Attention score radial gauge
-        ├── StatsBar.jsx        # Portfolio-level stats strip
-        ├── SettingsModal.jsx   # Sensitivity threshold settings
-        ├── HelpModal.jsx       # Keyboard shortcuts and usage guide
-        ├── AddStockForm.jsx    # Stock addition input with quick tags
-        ├── ConfirmModal.jsx    # Removal confirmation modal
-        ├── TickerTape.jsx      # Top-of-page price ribbon
-        ├── Toast.jsx           # Notification toasts
-        ├── Sparkline.jsx       # Mini price trend chart
-        └── Skeleton.jsx        # Loading placeholders
+├── src/
+│   ├── App.jsx            # Main dashboard layout and navigation
+│   ├── api.js             # Centralized API client
+│   ├── index.css          # Tailwind design tokens and animations
+│   └── components/
+│       ├── CatchupView.jsx     # Triage decision grid
+│       ├── WatchlistTable.jsx  # Full sortable/searchable watchlist table
+│       ├── StockCard.jsx       # Individual stock card with gauge and news
+│       ├── StockDetail.jsx     # Interactive stock history and news modal
+│       ├── PortfolioChart.jsx  # Portfolio performance and compare mode chart
+│       ├── ScoreGauge.jsx      # Attention score radial gauge
+│       ├── StatsBar.jsx        # Portfolio-level stats strip
+│       ├── SettingsModal.jsx   # Sensitivity threshold settings
+│       ├── HelpModal.jsx       # Keyboard shortcuts and usage guide
+│       ├── AddStockForm.jsx    # Stock addition input with quick tags
+│       ├── ConfirmModal.jsx    # Removal confirmation modal
+│       ├── TickerTape.jsx      # Top-of-page price ribbon
+│       ├── Toast.jsx           # Notification toasts
+│       ├── Sparkline.jsx       # Mini price trend chart
+│       └── Skeleton.jsx        # Loading placeholders
 ```
